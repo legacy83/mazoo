@@ -2,7 +2,7 @@
 
 $config = [
 
-    'id' => 'pikarla-console',
+    'id' => 'mazoo-console',
     'basePath' => dirname( __DIR__ ),
     'bootstrap' => [ 'log' ],
     'controllerNamespace' => 'app\\commands',

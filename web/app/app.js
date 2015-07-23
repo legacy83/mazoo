@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module( 'pikarla', [
+angular.module( 'mazoo', [
     'ngRoute',
     'site.home',
 

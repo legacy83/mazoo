@@ -19,7 +19,7 @@ echo "$apache2Add301Redirect" | bash -s "$domain" "www.$domain"
 # -- MySQL Databases
 # =========================================
 
-echo "$mySQLCreateDB" | bash -s "pikarla"
+echo "$mySQLCreateDB" | bash -s "mazoo"
 
 # -- Symbolic Links
 # =========================================

@@ -14,7 +14,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand brand" href="<?= Yii::$app->homeUrl; ?>">Pikarla</a>
+                <a class="navbar-brand brand" href="<?= Yii::$app->homeUrl; ?>">Mazoo</a>
             </div>
         </div>
     </nav>
@@ -42,7 +42,7 @@
     <hr>
 
     <footer>
-        <p>&copy; Pikarla <?php echo date( 'Y' ); ?></p>
+        <p>&copy; Mazoo <?php echo date( 'Y' ); ?></p>
     </footer>
 
 </div>

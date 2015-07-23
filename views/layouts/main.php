@@ -3,7 +3,7 @@
 <?php \app\assets\AppAsset::register( $this ); ?>
 <?php $this->beginPage(); ?>
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->language; ?>" ng-app="pikarla">
+<html lang="<?= Yii::$app->language; ?>" ng-app="mazoo">
 <head>
     <meta charset="<?= Yii::$app->charset; ?>">
     <title><?= \yii\helpers\Html::encode( $this->title ); ?></title>

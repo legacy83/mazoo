@@ -1,6 +1,6 @@
 {
-  "name": "trsenna/pikarla",
-  "description": "Just one more custom Angular/Yii2 starter application",
+  "name": "trsenna/mazoo",
+  "description": "Just one more custom DurandalJS/Yii2 starter application",
   "require": {
     "php": ">=5.5.9",
     "yiisoft/yii2": ">=2.0.4",

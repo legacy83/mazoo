@@ -1,2 +1,2 @@
-# pikarla
-Just one more custom Angular/Yii2 starter application
+# mazoo
+Just one more custom DurandalJS/Yii2 starter application
