@@ -1,0 +1,18 @@
+{
+  "name": "trsenna/mazoo",
+  "description": "Just one more custom Durandal/Yii2 starter application",
+  "dependencies": {
+    "lodash": "~3.9.3",
+    "jquery": "~2.1.4",
+    "requirejs": "~2.1.19",
+    "requirejs-text": "~2.0.14",
+    "knockout": "~3.3.0",
+    "durandal": "~2.1.0",
+    "bootstrap": "~3.3.5"
+  },
+  "resolutions": {
+    "jquery": "~2.1.4",
+    "requirejs": "~2.1.19",
+    "requirejs-text": "~2.0.14"
+  }
+}

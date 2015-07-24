@@ -4,7 +4,11 @@
 # =========================================
 composer global require "fxp/composer-asset-plugin:1.0.0"
 
-# -- App Install/Update
+# -- Backend Install/Update
 # =========================================
-cd /vagrant/ && composer install
-cd /vagrant/ && composer update
+cd /vagrant/backend/ && composer install
+cd /vagrant/backend/ && composer update
+
+# -- WWW Install/Update
+# =========================================
+cd /vagrant/www && bower install

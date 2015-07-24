@@ -29,4 +29,4 @@ rm -rf "/var/www/www.$domain/public_html"
 ln -s /vagrant/www "/var/www/www.$domain/public_html"
 
 rm -rf "/var/www/backend.$domain/public_html"
-ln -s /vagrant/backend "/var/www/backend.$domain/public_html"
+ln -s /vagrant/backend/web "/var/www/backend.$domain/public_html"
