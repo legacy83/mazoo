@@ -8,7 +8,8 @@
     "requirejs-text": "~2.0.14",
     "knockout": "~3.3.0",
     "durandal": "~2.1.0",
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.3.0"
   },
   "resolutions": {
     "jquery": "~2.1.4",
