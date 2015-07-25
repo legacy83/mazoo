@@ -4,10 +4,15 @@
 # =========================================
 composer global require "fxp/composer-asset-plugin:1.0.0"
 
-# -- Backend Install/Update
+# -- API Install/Update
 # =========================================
-cd /vagrant/backend/ && composer install
-cd /vagrant/backend/ && composer update
+cd /vagrant/api/ && composer install
+cd /vagrant/api/ && composer update
+
+# -- Console Install/Update
+# =========================================
+cd /vagrant/console/ && composer install
+cd /vagrant/console/ && composer update
 
 # -- WWW Install/Update
 # =========================================

@@ -14,7 +14,7 @@ mySQLCreateDB="$(curl -sS https://raw.githubusercontent.com/trsenna/gozma14-cook
 
 echo "$apache2AddVhost" | bash -s "$domain"
 echo "$apache2AddVhost" | bash -s "www.$domain"
-echo "$apache2AddVhost" | bash -s "backend.$domain"
+echo "$apache2AddVhost" | bash -s "api.$domain"
 echo "$apache2Add301Redirect" | bash -s "$domain" "www.$domain"
 
 # -- MySQL Databases
@@ -28,5 +28,5 @@ echo "$mySQLCreateDB" | bash -s "mazoo"
 rm -rf "/var/www/www.$domain/public_html"
 ln -s /vagrant/www "/var/www/www.$domain/public_html"
 
-rm -rf "/var/www/backend.$domain/public_html"
-ln -s /vagrant/backend/web "/var/www/backend.$domain/public_html"
+rm -rf "/var/www/api.$domain/public_html"
+ln -s /vagrant/api/web "/var/www/api.$domain/public_html"
