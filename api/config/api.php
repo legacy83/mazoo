@@ -4,6 +4,7 @@ $config = [
 
     'id' => 'mazoo-api',
     'basePath' => dirname( __DIR__ ),
+    'controllerNamespace' => 'api\\controllers',
     'bootstrap' => [ 'log' ],
 
     /*

@@ -1,6 +1,6 @@
 <?php
 
-namespace api\modules\v01\controllers;
+namespace api\modules\scaffold\controllers;
 
 use api\controllers\Controller;
 
@@ -9,7 +9,7 @@ class DefaultController extends Controller
     public function actionIndex()
     {
         $appIdentity = \Yii::$app->id;
-        $moduleIdentity = \Yii::$app->getModule( 'v01' )->id;
-        return "$appIdentity | $moduleIdentity is not ready!";
+        $moduleIdentity = \Yii::$app->getModule( 'scaffold' )->id;
+        return "$appIdentity | $moduleIdentity is ready!";
     }
 }

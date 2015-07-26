@@ -8,6 +8,8 @@ class DefaultController extends Controller
 {
     public function actionIndex()
     {
-        return '@todo';
+        $appIdentity = \Yii::$app->id;
+        $moduleIdentity = \Yii::$app->getModule( 'v02' )->id;
+        return "$appIdentity | $moduleIdentity is not ready!";
     }
 }
