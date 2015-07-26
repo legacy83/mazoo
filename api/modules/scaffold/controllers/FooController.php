@@ -1,10 +1,10 @@
 <?php
 
-namespace scaffold\controllers;
+namespace api\modules\scaffold\controllers;
 
 use api\controllers\ActiveController;
 
 class FooController extends ActiveController
 {
-    public $modelClass = 'scaffold\models\Foo';
+    public $modelClass = 'api\modules\scaffold\models\Foo';
 }

@@ -83,7 +83,7 @@ $config = [
             'class' => 'api\modules\v01\Module',
         ],
         'scaffold' => [
-            'class' => 'scaffold\Module',
+            'class' => 'api\modules\scaffold\Module',
         ],
     ],
 ];

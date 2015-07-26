@@ -1,6 +1,6 @@
 <?php
 
-namespace scaffold\models;
+namespace api\modules\scaffold\models;
 
 use yii\db\ActiveRecord;
 

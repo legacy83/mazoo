@@ -1,6 +1,6 @@
 <?php
 
-namespace scaffold\controllers;
+namespace api\modules\scaffold\controllers;
 
 use api\controllers\Controller;
 
