@@ -79,6 +79,9 @@ $config = [
      */
 
     'modules' => [
+        'v01' => [
+            'class' => 'api\modules\v01\Module',
+        ],
         'scaffold' => [
             'class' => 'scaffold\Module',
         ],
