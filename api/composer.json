@@ -3,11 +3,7 @@
   "description": "Just one more custom Durandal/Yii2 starter application",
   "require": {
     "php": ">=5.5.9",
-    "yiisoft/yii2": ">=2.0.4",
-    "bower-asset/lodash": "3.9.*",
-    "bower-asset/angular": "1.4.*",
-    "bower-asset/angular-route": "1.4.*",
-    "bower-asset/bootstrap": "3.3.*"
+    "yiisoft/yii2": ">=2.0.4"
   },
   "extra": {
     "asset-installer-paths": {

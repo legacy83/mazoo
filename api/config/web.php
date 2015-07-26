@@ -2,7 +2,7 @@
 
 $config = [
 
-    'id' => 'yuba',
+    'id' => 'mazoo-api',
     'basePath' => dirname( __DIR__ ),
     'bootstrap' => [ 'log' ],
 
