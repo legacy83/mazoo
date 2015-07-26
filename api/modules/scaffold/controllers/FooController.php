@@ -2,7 +2,7 @@
 
 namespace scaffold\controllers;
 
-use scaffold\rest\ActiveController;
+use api\controllers\ActiveController;
 
 class FooController extends ActiveController
 {

@@ -2,7 +2,7 @@
 
 namespace api\modules\v01\controllers;
 
-use api\modules\v01\rest\Controller;
+use api\controllers\Controller;
 
 class DefaultController extends Controller
 {

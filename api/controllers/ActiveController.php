@@ -1,6 +1,6 @@
 <?php
 
-namespace api\modules\v01\rest;
+namespace api\controllers;
 
 class ActiveController extends \yii\rest\ActiveController
 {

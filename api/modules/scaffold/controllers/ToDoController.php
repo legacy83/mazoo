@@ -2,7 +2,7 @@
 
 namespace scaffold\controllers;
 
-use scaffold\rest\Controller;
+use api\controllers\Controller;
 
 class ToDoController extends Controller
 {
