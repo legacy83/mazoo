@@ -1,6 +1,6 @@
 <?php
 
-namespace api\modules\v01\controllers;
+namespace api\modules\v02\controllers;
 
 use api\controllers\Controller;
 
