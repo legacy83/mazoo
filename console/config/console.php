@@ -4,7 +4,7 @@ $config = [
 
     'id' => 'mazoo-console',
     'basePath' => dirname( __DIR__ ),
-    'controllerNamespace' => 'app\\commands',
+    'controllerNamespace' => 'console\\commands',
     'bootstrap' => [ 'log' ],
 
     /*
