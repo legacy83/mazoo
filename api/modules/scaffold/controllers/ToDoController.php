@@ -2,7 +2,7 @@
 
 namespace api\modules\scaffold\controllers;
 
-use api\controllers\Controller;
+use api\components\rest\Controller;
 
 class ToDoController extends Controller
 {

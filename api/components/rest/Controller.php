@@ -1,8 +1,8 @@
 <?php
 
-namespace api\controllers;
+namespace api\components\rest;
 
-class ActiveController extends \yii\rest\ActiveController
+class Controller extends \yii\rest\Controller
 {
     public function behaviors()
     {
