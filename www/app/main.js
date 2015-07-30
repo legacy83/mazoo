@@ -23,13 +23,12 @@ define(['durandal/system', 'durandal/app', 'durandal/viewLocator'], function (sy
     app.title = 'Mazoo';
 
     app.configurePlugins({
-        router: true,
-        dialog: true
+        router: true
     });
 
     app.start().then(function () {
         viewLocator.useConvention();
-        app.setRoot('viewmodels/shell', 'entrance');
+        app.setRoot('viewmodels/shell');
     });
 
 });
