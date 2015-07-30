@@ -8,7 +8,8 @@
         },
         activate: function () {
             router.map([
-                {route: '', moduleId: 'viewmodels/site/home'}
+                {route: '', moduleId: 'viewmodels/site/home'},
+                {route: '@todo', moduleId: 'viewmodels/scaffold/todo'}
             ]).buildNavigationModel(100);
 
             return router.activate();
