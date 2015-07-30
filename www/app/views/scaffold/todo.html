@@ -2,9 +2,8 @@
     <h1>@todo</h1>
 </div>
 
-<div class="row">
+<div class="row" data-bind="foreach: models">
 
-    <!-- ko foreach: models -->
     <div class="col-md-6">
 
         <h4 data-bind="text: $data.title"></h4>
@@ -12,6 +11,5 @@
         <p data-bind="text: $data.content"></p>
 
     </div>
-    <!-- /ko -->
 
 </div>
