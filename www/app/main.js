@@ -1,4 +1,4 @@
-﻿requirejs.config( {
+﻿requirejs.config({
     paths: {
         'text': 'bower_components/requirejs-text/text',
         'durandal': 'bower_components/durandal/js',
@@ -10,31 +10,26 @@
     },
     shim: {
         'bootstrap': {
-            deps: [ 'jquery' ],
+            deps: ['jquery'],
             exports: 'jQuery'
         }
     }
-} );
+});
 
-define( [ 'durandal/system', 'durandal/app', 'durandal/viewLocator' ], function ( system, app, viewLocator ) {
-    
-    //>>excludeStart("build", true);
-    system.debug( true );
-    //>>excludeEnd("build");
+define(['durandal/system', 'durandal/app', 'durandal/viewLocator'], function (system, app, viewLocator) {
 
-    app.title = 'Durandal Starter Kit';
+    system.debug(true);
 
-    app.configurePlugins( {
+    app.title = 'Mazoo';
+
+    app.configurePlugins({
         router: true,
         dialog: true
-    } );
+    });
 
-    app.start().then( function () {
-        //Replace 'viewmodels' in the moduleId with 'views' to locate the view.
-        //Look for partial views in a 'views' folder in the root.
+    app.start().then(function () {
         viewLocator.useConvention();
+        app.setRoot('viewmodels/shell', 'entrance');
+    });
 
-        //Show the app by setting the root view model for our application with a transition.
-        app.setRoot( 'viewmodels/shell', 'entrance' );
-    } );
-} );
+});

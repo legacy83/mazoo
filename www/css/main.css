@@ -1,4 +1,9 @@
-﻿.splash {
+﻿body {
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+.splash {
     text-align: center;
     margin: 10% 0 0 0;
 }
@@ -16,31 +21,4 @@
     display: inline-block;
     font-size: 5em;
     margin-top: 50px;
-}
-
-.page-host {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50px;
-    bottom: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-section {
-    margin: 0 20px;
-}
-
-.navbar-nav li.loader {
-    margin: 12px 6px 0 6px;
-    visibility: hidden;
-}
-
-.navbar-nav li.loader.active {
-    visibility: visible;
-}
-
-.pictureDetail {
-    max-width: 425px;
 }
