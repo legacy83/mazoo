@@ -1,17 +1,18 @@
 ﻿'use strict';
 
-define(['plugins/http'], function (http) {
+define(function (require) {
 
-    var $ = require('jquery'),
-        ko = require('knockout');
+    var _ = require('lodash'),
+        ko = require('knockout'),
+        http = require('plugins/http');
 
     return function () {
         var self = this;
         self.models = ko.observableArray([]);
         self.activate = function () {
-            $.get('http://api.192.168.27.14.xip.io/?r=scaffold/to-do', function (data) {
-                $.each(data, function (key, val) {
-                    self.models.push(val);
+            http.get('http://api.192.168.27.14.xip.io/?r=scaffold/to-do').then(function (data) {
+                _.forEach(data, function (it) {
+                    self.models.push(it);
                 });
             });
         };
