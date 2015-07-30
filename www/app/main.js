@@ -1,4 +1,6 @@
-﻿requirejs.config({
+﻿'use strict';
+
+requirejs.config({
     paths: {
         'text': 'bower_components/requirejs-text/text',
         'jquery': 'bower_components/jquery/dist/jquery',
@@ -17,9 +19,10 @@
     }
 });
 
-define(['durandal/system', 'durandal/app', 'durandal/viewLocator'], function (system, app, viewLocator) {
+define(function (require) {
 
-    system.debug(true);
+    var app = require('durandal/app'),
+        viewLocator = require('durandal/viewLocator');
 
     app.title = 'Mazoo';
 
