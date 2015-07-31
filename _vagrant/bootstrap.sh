@@ -26,7 +26,7 @@ echo "$mySQLCreateDB" | bash -s "mazoo"
 # =========================================
 
 rm -rf "/var/www/www.$domain/public_html"
-ln -s /vagrant/www "/var/www/www.$domain/public_html"
+ln -s /vagrant/www/web "/var/www/www.$domain/public_html"
 
 rm -rf "/var/www/api.$domain/public_html"
 ln -s /vagrant/api/web "/var/www/api.$domain/public_html"
