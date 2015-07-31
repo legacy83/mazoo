@@ -4,18 +4,25 @@ define(function (require) {
 
     var _ = require('lodash'),
         ko = require('knockout'),
-        http = require('plugins/http');
+        todoAPI = require('components/api/scaffold/todo');
 
-    return function () {
+    var viewModel = function () {
         var self = this;
         self.models = ko.observableArray([]);
-        self.activate = function () {
-            http.get('http://api.192.168.27.14.xip.io/?r=scaffold/to-do').then(function (data) {
-                _.forEach(data, function (it) {
-                    self.models.push(it);
-                });
-            });
-        };
     };
+
+    viewModel.prototype.activate = function () {
+
+        var self = this;
+
+        todoAPI.all().then(function (data) {
+            _.forEach(data, function (it) {
+                self.models.push(it);
+            });
+        });
+        
+    };
+
+    return viewModel;
 
 });
