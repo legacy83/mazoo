@@ -32,7 +32,7 @@ define(function (require) {
 
     app.start().then(function () {
         viewLocator.useConvention();
-        app.setRoot('viewmodels/shell');
+        app.setRoot('viewModels/shell');
     });
 
 });
