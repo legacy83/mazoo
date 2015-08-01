@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-requirejs.config({
+requirejs.config( {
     paths: {
         'text': 'bower_components/requirejs-text/text',
         'jquery': 'bower_components/jquery/dist/jquery',
@@ -13,26 +13,27 @@ requirejs.config({
     },
     shim: {
         'bootstrap': {
-            deps: ['jquery'],
+            deps: [ 'jquery' ],
             exports: 'jQuery'
         }
-    }
-});
+    },
+    urlArgs: "bust=" + (new Date()).getTime()
+} );
 
-define(function (require) {
+define( function ( require ) {
 
-    var app = require('durandal/app'),
-        viewLocator = require('durandal/viewLocator');
+    var app = require( 'durandal/app' ),
+        viewLocator = require( 'durandal/viewLocator' );
 
     app.title = 'Mazoo';
 
-    app.configurePlugins({
+    app.configurePlugins( {
         router: true
-    });
+    } );
 
-    app.start().then(function () {
+    app.start().then( function () {
         viewLocator.useConvention();
-        app.setRoot('viewModels/shell');
-    });
+        app.setRoot( 'viewModels/shell' );
+    } );
 
-});
+} );

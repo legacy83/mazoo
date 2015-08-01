@@ -1,14 +1,17 @@
 ﻿'use strict';
 
-define(function (require) {
+define( function ( require ) {
 
     var API = {},
-        http = require('plugins/http');
+        http = require( 'plugins/http' ),
+        apiUtils = require( 'components/apiUtils' ),
+        routeTo = apiUtils.routeTo;
 
     API.all = function () {
-        return http.get('http://api.192.168.27.14.xip.io/?r=scaffold/to-do');
+        console.log( routeTo( 'scaffold/to-do' ) );
+        return http.get( routeTo( 'scaffold/to-do' ) );
     };
 
     return API;
 
-});
+} );
