@@ -20,7 +20,7 @@ define( function ( require ) {
         messages.push( alertMessage );
 
         _.delay( function () {
-            _.remove( messages, alertMessage );
+            messages.remove( alertMessage );
         }, 9000 );
 
     }
@@ -43,7 +43,7 @@ define( function ( require ) {
          * @param key
          */
         clear: function ( key ) {
-            _.remove( messages, byMessageKey( key ) );
+            messages.removeAll( _.where( messages(), byMessageKey( key ) ) );
         },
 
         /**

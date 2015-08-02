@@ -2,20 +2,17 @@
 
 define( function ( require ) {
 
-    var _ = require( 'lodash' ),
-        ko = require( 'knockout' ),
-        todoAPI = require( 'components/api/scaffold/todo' );
+    var flash = require( 'components/flashMessages' );
+    window.flash = flash;
 
     return function () {
         var self = this;
-        self.models = ko.observableArray( [] );
+        self.flash = flash;
 
         self.activate = function () {
-            todoAPI.all().then( function ( data ) {
-                _.forEach( data, function ( it ) {
-                    self.models.push( it );
-                } );
-            } );
+            flash.success( '@foo has been activated!' );
+            flash.success( '@foo has been activated! really' );
+            flash.success( '@foo has been activated! rally really' );
         };
 
     };
