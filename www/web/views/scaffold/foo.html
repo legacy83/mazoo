@@ -1,10 +1,3 @@
 <div class="page-header">
     <h1>@foo</h1>
 </div>
-
-<div class="alert alert-success alert-dismissible" data-bind="visible: flash.has('success')">
-    <button type="button" class="close" data-bind="click: flash.clear.bind($data, 'success')"><span>&times;</span></button>
-    <ul data-bind="foreach: flash.success()">
-        <li data-bind="text: $data.content"></li>
-    </ul>
-</div>

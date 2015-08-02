@@ -3,10 +3,12 @@
 define( function ( require ) {
 
     var app = require( 'durandal/app' ),
-        router = require( 'plugins/router' );
+        router = require( 'plugins/router' ),
+        flashMessages = require( 'components/flashMessages' );
 
     return function () {
         var self = this;
+        self.flashMessages = flashMessages;
 
         self.activate = function () {
             router.map( [
