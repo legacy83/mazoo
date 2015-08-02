@@ -8,7 +8,6 @@ define( function ( require ) {
         routeTo = apiUtils.routeTo;
 
     API.all = function () {
-        console.log( routeTo( 'scaffold/to-do' ) );
         return http.get( routeTo( 'scaffold/to-do' ) );
     };
 

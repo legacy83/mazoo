@@ -11,7 +11,8 @@ define( function ( require ) {
         self.activate = function () {
             router.map( [
                 { route: '', moduleId: 'viewModels/site/home' },
-                { route: '@todo', moduleId: 'viewModels/scaffold/todo' }
+                { route: '@todo', moduleId: 'viewModels/scaffold/todo' },
+                { route: '@foo', moduleId: 'viewModels/scaffold/foo' }
             ] ).buildNavigationModel( 100 );
 
             return router.activate();
