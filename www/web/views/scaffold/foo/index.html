@@ -1,0 +1,61 @@
+<div class="page-header">
+    <h1>@foo</h1>
+</div>
+
+<div class="row">
+
+    <div class="col-md-12">
+
+        <table class="table table-hover table-bordered">
+
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>@one</th>
+                <th>@two</th>
+                <th>@three</th>
+                <th></th>
+            </tr>
+            </thead>
+
+            <tbody data-bind="foreach: models">
+
+            <tr>
+                <td data-bind="text: $data.id"></td>
+                <td data-bind="text: $data.one"></td>
+                <td data-bind="text: $data.two"></td>
+                <td data-bind="text: $data.three"></td>
+                <td>
+
+                    <a data-bind="attr: { href: '#/@foo/show/' + $data.id }"><span class="glyphicon glyphicon-link"></span></a>
+                    <a data-bind="attr: { href: '#/@foo/edit/' + $data.id }"><span class="glyphicon glyphicon-edit"></span></a>
+                    <a data-bind="attr: { href: '#/@foo/destroy/' + $data.id }"><span class="glyphicon glyphicon-remove"></span></a>
+
+                </td>
+            </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <div class="col-md-12">
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+
+                <div class="pull-left"></div>
+
+                <div class="pull-right">
+
+                    <a class="btn btn-primary" data-bind="attr: { href: '#/@foo/create' }">New @foo</a>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -4,7 +4,7 @@ define( function ( require ) {
 
     var _ = require( 'lodash' ),
         ko = require( 'knockout' ),
-        fooAPI = require( 'components/api/foo' );
+        fooAPI = require( 'components/api/scaffold/foo' );
 
     return function () {
         var self = this;
