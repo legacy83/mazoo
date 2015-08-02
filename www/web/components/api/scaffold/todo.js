@@ -7,8 +7,10 @@ define( function ( require ) {
         apiUtils = require( 'components/apiUtils' ),
         routeTo = apiUtils.routeTo;
 
+    window.http = http;
+
     API.all = function () {
-        return http.get( routeTo( 'scaffold/to-do' ) );
+        return http.get( 'http://api.192.168.27.14.xip.io/scaffold/to-do' );
     };
 
     return API;

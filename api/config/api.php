@@ -14,6 +14,19 @@ $config = [
     'components' => [
 
         /*
+         * components/urlManager
+         */
+
+        'urlManager' => [
+            'enablePrettyUrl' => TRUE,
+            'showScriptName' => FALSE,
+            'enableStrictParsing' => FALSE,
+            'rules' => [
+                [ 'class' => 'yii\rest\UrlRule', 'controller' => 'scaffold/foo', 'pluralize' => FALSE ],
+            ],
+        ],
+
+        /*
          * components/request
          */
 
