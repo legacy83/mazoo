@@ -3,8 +3,8 @@
 define( function ( require ) {
 
     var ko = require( 'knockout' ),
-        router = require( 'durandal/router' ),
-        fooAPI = require( 'components/api/foo' ),
+        router = require( 'plugins/router' ),
+        fooAPI = require( 'components/api/scaffold/foo' ),
         flash = require( 'components/flashMessages' );
 
     return function () {

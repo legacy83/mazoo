@@ -9,15 +9,15 @@ define( function ( require ) {
         routeTo = apiUtils.routeTo;
 
     API.all = function () {
-        return http.get( routeTo( 'scaffold/foo' ) );
+        return http.get( 'http://api.192.168.27.14.xip.io/scaffold/foo' );
     };
 
     API.get = function ( identity ) {
-        return http.get( routeTo( 'scaffold/foo/view', identity ) );
+        return http.get( 'http://api.192.168.27.14.xip.io/scaffold/foo/' + identity );
     };
 
     API.post = function ( model ) {
-        return http.post( routeTo( 'scaffold/foo/create' ), model );
+        return http.post( 'http://api.192.168.27.14.xip.io/scaffold/foo', { one: '123', two: 'outro' } );
     };
 
     API.put = function ( model ) {
