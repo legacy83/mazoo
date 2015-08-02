@@ -2,11 +2,11 @@
     <h1>Show @foo</h1>
 </div>
 
-<div class="row">
+<div class="row" data-bind="with: model">
 
     <div class="col-md-8">
 
-        <table class="table table-hover table-bordered" data-bind="with: model">
+        <table class="table table-hover table-bordered">
 
             <thead>
             <tr>
@@ -43,8 +43,8 @@
 
                 <div class="pull-right">
 
-                    <a class="btn btn-default" href="#/@foo">Cancel</a>
-                    <a class="btn btn-primary" href="#/@foo/edit/{{ model.id }}">Edit</a>
+                    <a class="btn btn-default" data-bind="attr: { href: '#/@foo' }">Cancel</a>
+                    <a class="btn btn-primary" data-bind="attr: { href: '#/@foo/edit/' + $data.id }">Edit</a>
 
                 </div>
 
@@ -53,7 +53,7 @@
             <ul class="list-group">
                 <li class="list-group-item">
                     Would you like to destroy @foo?
-                    <a class="text-danger" href="#/@foo/destroy/{{ model.id }}">Yes!</a>
+                    <a class="text-danger" data-bind="attr: { href: '#/@foo/destroy/' + $data.id }">Yes!</a>
                 </li>
             </ul>
 
