@@ -17,7 +17,7 @@ define( function ( require ) {
     };
 
     API.post = function ( model ) {
-        return http.post( 'http://api.192.168.27.14.xip.io/scaffold/foo', { one: '123', two: 'outro' } );
+        return http.post( 'http://api.192.168.27.14.xip.io/scaffold/foo', model );
     };
 
     API.put = function ( model ) {

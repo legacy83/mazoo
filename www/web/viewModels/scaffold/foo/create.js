@@ -7,9 +7,16 @@ define( function ( require ) {
         fooAPI = require( 'components/api/scaffold/foo' ),
         flash = require( 'components/flashMessages' );
 
+    var Model = function () {
+        var self = this;
+        self.one = ko.observable();
+        self.two = ko.observable();
+        self.three = ko.observable();
+    };
+
     return function () {
         var self = this;
-        self.model = ko.observable();
+        self.model = new Model();
 
         /**
          * Create the model
