@@ -12,19 +12,19 @@ define( function ( require ) {
 
     var apiUtils = {
         protocol: window.location.protocol,
-        host: window.location.host.replace( 'www', 'api' ),
+        host: window.location.host.replace( 'www', 'api' )
+    };
 
-        routeTo: function ( r, identity ) {
-            var query = { r: r };
-            if ( isIdentity( identity ) ) {
-                query.id = parseInt( identity );
-            }
-
-            var apiLocation = [ apiUtils.protocol, '//', apiUtils.host, '?' ];
-            apiLocation = apiLocation.join( '' );
-
-            return apiLocation + $.param( query );
+    apiUtils.routeTo = function ( r, identity ) {
+        var query = { r: r };
+        if ( isIdentity( identity ) ) {
+            query.id = parseInt( identity );
         }
+
+        var apiLocation = [ apiUtils.protocol, '//', apiUtils.host, '?' ];
+        apiLocation = apiLocation.join( '' );
+
+        return apiLocation + $.param( query );
     };
 
     return apiUtils;
