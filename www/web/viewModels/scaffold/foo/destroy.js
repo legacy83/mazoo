@@ -4,7 +4,7 @@ define( function ( require ) {
 
     var ko = require( 'knockout' ),
         router = require( 'plugins/router' ),
-        flash = require( 'components/flashMessages' ),
+        flash = require( 'components/flash/flash' ),
         fooAPI = require( 'components/api/scaffold/foo' );
 
     return function () {

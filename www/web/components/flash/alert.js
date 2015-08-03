@@ -3,9 +3,9 @@
 define( function ( require ) {
 
     var ko = require( 'knockout' ),
-        flash = require( 'components/flashMessages/flash' );
+        flash = require( 'components/flash/flash' );
 
-    ko.components.register( 'flashMessages-alert', {
+    ko.components.register( 'flash-alert', {
         viewModel: function () {
             var self = this;
             self.flash = flash;

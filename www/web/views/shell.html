@@ -26,14 +26,7 @@
 
 <div class="container">
 
-    <div data-bind="component: 'flashMessages-alert'"></div>
-
-    <div class="alert alert-success alert-dismissible" data-bind="visible: flashMessages.has('success')">
-        <button type="button" class="close" data-bind="click: flashMessages.clear.bind($data, 'success')"><span>&times;</span></button>
-        <ul data-bind="foreach: flashMessages.success()">
-            <li data-bind="text: $data.content"></li>
-        </ul>
-    </div>
+    <div data-bind="component: 'flash-alert'"></div>
 
     <div class="page-host" data-bind="router: { transition:'entrance' }"></div>
 

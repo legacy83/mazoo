@@ -3,14 +3,12 @@
 define( function ( require ) {
 
     var app = require( 'durandal/app' ),
-        router = require( 'plugins/router' ),
-        flashMessages = require( 'components/flashMessages' );
+        router = require( 'plugins/router' );
 
-    require( 'components/flashMessages/alert' );
+    require( 'components/flash/alert' );
 
     return function () {
         var self = this;
-        self.flashMessages = flashMessages;
 
         /**
          * Run the custom activation.

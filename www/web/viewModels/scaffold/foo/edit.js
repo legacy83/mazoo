@@ -4,8 +4,8 @@ define( function ( require ) {
 
     var ko = require( 'knockout' ),
         router = require( 'plugins/router' ),
-        fooAPI = require( 'components/api/scaffold/foo' ),
-        flash = require( 'components/flashMessages/flash' );
+        flash = require( 'components/flash/flash' ),
+        fooAPI = require( 'components/api/scaffold/foo' );
 
     var Model = function ( data ) {
         var self = this;
