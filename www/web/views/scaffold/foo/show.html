@@ -2,11 +2,11 @@
     <h1>Show @foo</h1>
 </div>
 
-<div class="row" data-bind="with: model">
+<div class="row">
 
     <div class="col-md-8">
 
-        <table class="table table-hover table-bordered">
+        <table class="table table-hover table-bordered" data-bind="with: model">
 
             <thead>
             <tr>
@@ -36,7 +36,7 @@
 
     <div class="col-md-4">
 
-        <div class="panel panel-default">
+        <div class="panel panel-default" data-bind="with: model">
             <div class="panel-body">
 
                 <div class="pull-left"></div>
