@@ -6,6 +6,8 @@ define( function ( require ) {
         router = require( 'plugins/router' ),
         flashMessages = require( 'components/flashMessages' );
 
+    require( 'components/flashMessages/alert' );
+
     return function () {
         var self = this;
         self.flashMessages = flashMessages;
