@@ -3,6 +3,7 @@
 define( function ( require ) {
 
     var _ = require( 'lodash' ),
+        ko = require( 'knockout' ),
         http = require( 'plugins/http' ),
         apiUtils = require( 'components/apiUtils' );
 
@@ -45,17 +46,19 @@ define( function ( require ) {
      * @returns {*}
      */
     API.put = function ( model ) {
-        return http.put( resource( model.id ), model );
+        var identity = ko.toJS( model ).id;
+        return http.put( resource( identity ), model );
     };
 
     /**
      * Destroy an existing resource item.
      *
-     * @param identity
-     * @returns {boolean|*}
+     * @param model
+     * @returns {*}
      */
-    API.destroy = function ( identity ) {
-        return http.delete( resource( identity ) );
+    API.destroy = function ( model ) {
+        var identity = ko.toJS( model ).id;
+        return http.remove( resource( identity ) );
     };
 
     return API;
