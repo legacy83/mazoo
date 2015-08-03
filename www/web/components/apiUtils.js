@@ -20,7 +20,7 @@ define( function ( require ) {
          * @param identity
          * @returns {string}
          */
-        resourceUrl: function ( r, identity ) {
+        buildResourceUrl: function ( r, identity ) {
             var apiLocation = [ protocol, '//', host, '/', r ];
             if ( isIdentity( identity ) ) {
                 apiLocation.push( '/' );

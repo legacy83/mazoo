@@ -2,13 +2,20 @@
 
 define( function ( require ) {
 
-    var API = {},
+    var _ = require( 'lodash' ),
         http = require( 'plugins/http' ),
-        apiUtils = require( 'components/apiUtils' ),
-        resourceUrl = apiUtils.resourceUrl;
+        apiUtils = require( 'components/apiUtils' );
 
+    var API = {},
+        resource = _.partial( apiUtils.buildResourceUrl, 'scaffold/to-do' );
+
+    /**
+     * Get all the resource items.
+     *
+     * @returns {*}
+     */
     API.all = function () {
-        return http.get( resourceUrl( 'scaffold/to-do' ) );
+        return http.get( resource() );
     };
 
     return API;
