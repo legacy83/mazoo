@@ -9,11 +9,8 @@ define( function ( require ) {
         var self = this;
         self.model = ko.observable();
 
-        window.model = self.model;
-
         /**
-         * Run the custom activation
-         *
+         * Run the custom activation.
          */
         self.activate = function ( identity ) {
             fooAPI.get( identity ).success( function ( result ) {

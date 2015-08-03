@@ -48,7 +48,6 @@ define( function ( require ) {
 
         /**
          * Add or get success flash messages.
-         *
          */
         success: _.partial( alertMessage, 'success' )
 

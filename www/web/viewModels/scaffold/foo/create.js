@@ -29,8 +29,7 @@ define( function ( require ) {
         };
 
         /**
-         * Cancel the model creation
-         *
+         * Cancel the model creation.
          */
         self.doCancel = function () {
             router.navigate( '/@foo' );

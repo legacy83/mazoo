@@ -10,6 +10,9 @@ define( function ( require ) {
         var self = this;
         self.models = ko.observableArray( [] );
 
+        /**
+         * Run the custom activation.
+         */
         self.activate = function () {
             todoAPI.all().then( function ( data ) {
                 _.forEach( data, function ( it ) {

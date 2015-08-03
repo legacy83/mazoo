@@ -10,9 +10,12 @@ define( function ( require ) {
         var self = this;
         self.flashMessages = flashMessages;
 
+        /**
+         * Run the custom activation.
+         */
         self.activate = function () {
             router.map( [
-                
+
                 { route: '', moduleId: 'viewModels/site/home' },
 
                 /* scaffold routes */
@@ -20,6 +23,7 @@ define( function ( require ) {
                 { route: '@foo', moduleId: 'viewModels/scaffold/foo/index' },
                 { route: '@foo/create', moduleId: 'viewModels/scaffold/foo/create' },
                 { route: '@foo/show/:id', moduleId: 'viewModels/scaffold/foo/show' }
+                
             ] ).buildNavigationModel( 100 );
 
             return router.activate();

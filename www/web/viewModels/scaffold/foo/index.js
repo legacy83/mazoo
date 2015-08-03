@@ -11,8 +11,7 @@ define( function ( require ) {
         self.models = ko.observableArray( [] );
 
         /**
-         * Run the custom activation
-         *
+         * Run the custom activation.
          */
         self.activate = function () {
             fooAPI.all().success( function ( result ) {

@@ -7,6 +7,9 @@ define( function ( require ) {
     return function () {
         var self = this;
 
+        /**
+         * Run the custom activation.
+         */
         self.activate = function () {
             console.log( system.version );
         };
