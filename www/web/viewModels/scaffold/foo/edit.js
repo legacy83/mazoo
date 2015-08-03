@@ -31,7 +31,7 @@ define( function ( require ) {
         /**
          * Update the model
          */
-        self.doUpdate = function () {
+        self.doEdit = function () {
             fooAPI.put( self.model ).success( function () {
                 flash.success( '@foo modified successfully' );
                 router.navigate( '/@foo' );
