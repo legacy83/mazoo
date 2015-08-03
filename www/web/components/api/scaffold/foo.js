@@ -6,18 +6,18 @@ define( function ( require ) {
         apiUtils = require( 'components/apiUtils' );
 
     var API = {},
-        routeTo = apiUtils.routeTo;
+        resourceUrl = apiUtils.resourceUrl;
 
     API.all = function () {
-        return http.get( 'http://api.192.168.27.14.xip.io/scaffold/foo' );
+        return http.get( resourceUrl( 'scaffold/foo' ) );
     };
 
     API.get = function ( identity ) {
-        return http.get( 'http://api.192.168.27.14.xip.io/scaffold/foo/' + identity );
+        return http.get( resourceUrl( 'scaffold/foo', identity ) );
     };
 
     API.post = function ( model ) {
-        return http.post( 'http://api.192.168.27.14.xip.io/scaffold/foo', model );
+        return http.post( resourceUrl( 'scaffold/foo' ), model );
     };
 
     API.put = function ( model ) {

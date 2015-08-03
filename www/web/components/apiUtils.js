@@ -2,31 +2,34 @@
 
 define( function ( require ) {
 
-    var $ = require( 'jquery' ),
-        _ = require( 'lodash' );
+    var _ = require( 'lodash' ),
+        router = require( 'plugins/router' );
 
-    var router = require( 'plugins/router' ),
+    var protocol = window.location.protocol,
+        host = window.location.host.replace( 'www', 'api' ),
         isIdentity = function ( identity ) {
             return !_.isNaN( parseInt( identity ) );
         };
 
-    var apiUtils = {
-        protocol: window.location.protocol,
-        host: window.location.host.replace( 'www', 'api' )
-    };
+    return {
 
-    apiUtils.routeTo = function ( r, identity ) {
-        var query = { r: r };
-        if ( isIdentity( identity ) ) {
-            query.id = parseInt( identity );
+        /**
+         * Build the resource url.
+         *
+         * @param r
+         * @param identity
+         * @returns {string}
+         */
+        resourceUrl: function ( r, identity ) {
+            var apiLocation = [ protocol, '//', host, '/', r ];
+            if ( isIdentity( identity ) ) {
+                apiLocation.push( '/' );
+                apiLocation.push( identity );
+            }
+
+            return apiLocation.join( '' );
         }
 
-        var apiLocation = [ apiUtils.protocol, '//', apiUtils.host, '?' ];
-        apiLocation = apiLocation.join( '' );
-
-        return apiLocation + $.param( query );
     };
-
-    return apiUtils;
 
 } );
