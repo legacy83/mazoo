@@ -38,7 +38,7 @@ ln -s /vagrant/api/web "/var/www/api.$domain/public_html"
 # Console Project Setup
 ##########################################
 
-echo "$mySQLCreateDB" | bash -s "gaboo"
+echo "$mySQLCreateDB" | bash -s "mazoo"
 
 ##########################################
 # Sample Project Setup
