@@ -2,17 +2,19 @@
 
 # -- Composer Asset Plugin
 # =========================================
-composer global require "fxp/composer-asset-plugin:1.0.0"
+composer --no-interaction global require "fxp/composer-asset-plugin:1.0.0"
 
 # -- API Install/Update
 # =========================================
-cd /vagrant/api/ && composer install
-cd /vagrant/api/ && composer update
+cd /vagrant/api/ && composer --no-interaction install
+cd /vagrant/api/ && composer --no-interaction update
 
 # -- Console Install/Update
 # =========================================
-cd /vagrant/console/ && composer install
-cd /vagrant/console/ && composer update
+cd /vagrant/console/ && composer --no-interaction install
+cd /vagrant/console/ && composer --no-interaction update
+
+/vagrant/console/yii migrate --interactive=0
 
 # -- WWW Install/Update
 # =========================================
