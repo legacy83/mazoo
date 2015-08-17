@@ -19,7 +19,7 @@ define( function ( require ) {
                 { route: '', moduleId: 'viewModels/site/index' },
 
                 /* scaffold routes */
-                { route: '@todo', moduleId: 'viewModels/scaffold/todo' },
+                { route: '@todo', moduleId: 'viewModels/scaffold/todo/index' },
                 { route: '@foo', moduleId: 'viewModels/scaffold/foo/index' },
                 { route: '@foo/create', moduleId: 'viewModels/scaffold/foo/create' },
                 { route: '@foo/show/:id', moduleId: 'viewModels/scaffold/foo/show' },
