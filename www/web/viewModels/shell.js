@@ -16,7 +16,7 @@ define( function ( require ) {
         self.activate = function () {
             router.map( [
 
-                { route: '', moduleId: 'viewModels/site/home' },
+                { route: '', moduleId: 'viewModels/site/index' },
 
                 /* scaffold routes */
                 { route: '@todo', moduleId: 'viewModels/scaffold/todo' },

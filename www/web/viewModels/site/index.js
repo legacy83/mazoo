@@ -11,7 +11,7 @@ define( function ( require ) {
          * Run the custom activation.
          */
         self.activate = function () {
-            console.log( system.version );
+            //...
         };
 
     };
