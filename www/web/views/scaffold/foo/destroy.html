@@ -2,13 +2,13 @@
     <h1>Destroy @foo</h1>
 </div>
 
-<form>
+<form data-bind="with: model">
 
     <div class="row">
 
         <div class="col-md-8">
 
-            <table class="table table-hover table-bordered" data-bind="with: model">
+            <table class="table table-hover table-bordered">
 
                 <thead>
                 <tr>
@@ -47,8 +47,8 @@
 
                     <div class="pull-right">
 
-                        <button class="btn btn-default" data-bind="click: doCancel">No</button>
-                        <button class="btn btn-danger" data-bind="click: doDestroy">Yes</button>
+                        <button class="btn btn-default" data-bind="click: $parent.doCancel">No</button>
+                        <button class="btn btn-danger" data-bind="click: $parent.doDestroy">Yes</button>
 
                     </div>
 
