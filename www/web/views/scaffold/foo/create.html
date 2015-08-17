@@ -2,7 +2,7 @@
     <h1>New @foo</h1>
 </div>
 
-<form class="form-horizontal">
+<form class="form-horizontal" data-bind="with: model">
 
     <div class="row">
 
@@ -13,7 +13,7 @@
                 <label for="inputField1" class="col-sm-2 control-label">@one</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputField1" placeholder="@one" data-bind="value: model.one">
+                    <input type="text" class="form-control" id="inputField1" placeholder="@one" data-bind="value: $data.one">
                 </div>
 
             </div>
@@ -23,7 +23,7 @@
                 <label for="inputField2" class="col-sm-2 control-label">@two</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputField2" placeholder="@two" data-bind="value: model.two">
+                    <input type="text" class="form-control" id="inputField2" placeholder="@two" data-bind="value: $data.two">
                 </div>
 
             </div>
@@ -33,7 +33,7 @@
                 <label for="inputField3" class="col-sm-2 control-label">@three</label>
 
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputField3" placeholder="@three" data-bind="value: model.three">
+                    <input type="text" class="form-control" id="inputField3" placeholder="@three" data-bind="value: $data.three">
                 </div>
 
             </div>
@@ -49,8 +49,8 @@
 
                     <div class="pull-right">
 
-                        <button class="btn btn-default" data-bind="click: doCancel">Cancel</button>
-                        <button class="btn btn-primary" data-bind="click: doCreate">Create</button>
+                        <button class="btn btn-default" data-bind="click: $parent.doCancel">Cancel</button>
+                        <button class="btn btn-primary" data-bind="click: $parent.doCreate">Create</button>
 
                     </div>
 
